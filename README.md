@@ -1,15 +1,38 @@
-# SigmaOS-domain-blocker
+    # SigmaOS-domain-blocker
 
-Part of the SigmaOS multi-repository architecture.
+    Block domains system-wide via /etc/hosts
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/mintnanny
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Separation of Mechanism & Policy**
+- **Defensive Programming**
+- **Fail-Fast**
+- **KISS**
+- **Information Hiding**
+
+    ## Usage
+    Verbs: `add, remove, list, enable, disable, status`
+
+    ```
+    $ sigma-block add ads.example.com tracker.example.net
+$ sigma-block list
+$ sigma-block enable          # merge managed block into /etc/hosts
+$ sigma-block status
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
