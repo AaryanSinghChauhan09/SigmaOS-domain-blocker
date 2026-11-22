@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-domain-blocker Component Wiki
+# SigmaOS-domain-blocker Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-domain-blocker provides Block domains system-wide via /etc/hosts for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-domain-blocker provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-domain-blocker Abstraction
-- Fail-Fast on SigmaOS-domain-blocker Initialization Errors
-- Deterministic SigmaOS-domain-blocker Setup
-- Clear Abstraction Over SigmaOS-domain-blocker APIs
-- Composition over Inheritance for SigmaOS-domain-blocker extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-domain-blocker Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-domain-blocker Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-domain-blocker Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-domain-blocker APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-domain-blocker extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-domain-blocker follows a SigmaOS-domain-blocker pattern:
+SigmaOS-domain-blocker follows a SigmaOS-domain-blocker pattern:
 - **SigmaOS-domain-blocker Core**: Provides SigmaOS-domain-blocker support, SigmaOS-domain-blocker management, and SigmaOS-domain-blocker tracking
 - **Management**: Supports SigmaOS-domain-blocker management, SigmaOS-domain-blocker configuration, and SigmaOS-domain-blocker lifecycle
 - **Tracking**: Supports SigmaOS-domain-blocker status, SigmaOS-domain-blocker tracking, and SigmaOS-domain-blocker lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-domain-blocker follows a SigmaOS-domain-blocker pattern:
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-domain-blocker by given configuration
--  - Register a SigmaOS-domain-blocker by given name
--  - Get SigmaOS-domain-blocker status and SigmaOS-domain-blocker availability
--  - Track SigmaOS-domain-blocker management and SigmaOS-domain-blocker tracking
+- Manage a SigmaOS-domain-blocker by given configuration
+- Register a SigmaOS-domain-blocker by given name
+- Get SigmaOS-domain-blocker status and SigmaOS-domain-blocker availability
+- Track SigmaOS-domain-blocker management and SigmaOS-domain-blocker tracking
 - Error types for SigmaOS-domain-blocker failure scenarios or unsupported SigmaOS-domain-blocker types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-domain-blocker init, SigmaOS-domain-blocker management)
 3. **Assert**: Verify the expected SigmaOS-domain-blocker results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-domain-blocker initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-domain-blocker failure scenarios
 - Unit tests provided for SigmaOS-domain-blocker management and configuration
